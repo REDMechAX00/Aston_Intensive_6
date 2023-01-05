@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_contacts"
+    style="@style/Toolbar"
+    app:contentInsetStart="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/contacts_toolbar_title"
+            style="@style/Toolbar.Title"
+            android:text="@string/text_toolbar_title_contacts"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/contacts_toolbar_btn_cancel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/contacts_toolbar_btn_cancel"
+            style="@style/Toolbar.BaseButton"
+            android:layout_gravity="center|start"
+            android:contentDescription="@string/text_desc_image_cancel"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/contacts_toolbar_edit_text_search"
+            style="@style/Toolbar.EditTextSearch"
+            android:hint="@string/text_hint_contact_enter_contact_name"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/contacts_toolbar_btn_clear"
+            app:layout_constraintStart_toEndOf="@id/contacts_toolbar_btn_cancel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/contacts_toolbar_btn_clear"
+            style="@style/Toolbar.BaseButton"
+            android:contentDescription="@string/text_desc_image_clear"
+            android:src="@drawable/ic_clear"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/contacts_toolbar_btn_search"
+            style="@style/Toolbar.BaseButton"
+            android:contentDescription="@string/text_desc_image_search"
+            android:src="@drawable/ic_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

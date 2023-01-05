@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Toolbar.EditTextSearch" parent="Toolbar.Text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:autofillHints">name</item>
+        <item name="android:inputType">textCapSentences</item>
+    </style>
+
+    <style name="ContactDetails.EditTextName" parent="ContactDetails.BaseEditText">
+        <item name="android:autofillHints">cc-given-name</item>
+        <item name="android:inputType">textCapSentences</item>
+    </style>
+
+    <style name="ContactDetails.EditTextSurname" parent="ContactDetails.BaseEditText">
+        <item name="android:autofillHints">family-name</item>
+        <item name="android:inputType">textCapSentences</item>
+    </style>
+
+    <style name="ContactDetails.EditTextPhone" parent="ContactDetails.BaseEditText">
+        <item name="android:autofillHints">phoneNumberDevice</item>
+        <item name="android:inputType">phone</item>
+    </style>
+</resources>

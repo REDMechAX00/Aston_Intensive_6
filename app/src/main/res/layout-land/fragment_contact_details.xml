@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_contact_details"
+    android:orientation="vertical"
+    tools:context=".presentation.contact_details.ContactDetailsFragment">
+
+    <include
+        android:id="@+id/toolbar_contact_details_container"
+        layout="@layout/toolbar_contact_details_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/contact_details_left_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/contact_details_right_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/contact_details_photo"
+                    android:layout_width="@dimen/image_contact_details_size_land"
+                    android:layout_height="@dimen/image_contact_details_size_land"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/app_big_margin"
+                    android:contentDescription="@string/text_desc_image_contact"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/default_photo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contact_details_right_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/contact_details_left_container"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/contact_details_name"
+                    style="@style/ContactDetails.EditTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:width="0dp"
+                    android:hint="@string/text_hint_contact_name"
+                    android:inputType="textCapSentences" />
+
+                <EditText
+                    android:id="@+id/contact_details_surname"
+                    style="@style/ContactDetails.EditTextSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:width="0dp"
+                    android:hint="@string/text_hint_contact_surname"
+                    android:inputType="textCapSentences" />
+
+                <EditText
+                    android:id="@+id/contact_details_phone"
+                    style="@style/ContactDetails.EditTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:hint="@string/text_hint_contact_phone_number"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
